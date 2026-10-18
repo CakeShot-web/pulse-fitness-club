@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PULSE Fitness Club</title>
+  <meta name="description" content="PULSE Fitness Club — premium dark glass fitness website with memberships, trainers, nutrition, and store." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar glass-panel">
+      <div class="brand" aria-label="PULSE Fitness Club logo">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="rgba(255,255,255,0.04)"/>
+            <path d="M4 13L8.5 8L11 14L13.5 7L16 13L20 9" stroke="#7DD67D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-copy">
+          <span class="brand-name">PULSE</span>
+          <span class="brand-sub">FITNESS CLUB</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="select-stack">
+          <select id="langSelect" class="glass-select" aria-label="Language switcher">
+            <option value="en">EN</option>
+            <option value="uk">UA</option>
+            <option value="ru">RU</option>
+          </select>
+          <select id="currencySelect" class="glass-select" aria-label="Currency switcher">
+            <option value="UAH">UAH ₴</option>
+            <option value="USD">USD $</option>
+            <option value="RUB">RUB ₽</option>
+          </select>
+        </div>
+
+        <button id="cartBtn" class="ghost-btn" aria-label="Shopping cart">
+          <i data-feather="shopping-cart"></i>
+          <span id="cartCount" class="cart-count">0</span>
+        </button>
+        <button id="headerStart" class="primary-btn">
+          <span data-i18n="start_workouts">Start Workouts</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy glass-panel">
+          <div class="eyebrow">Premium Performance</div>
+          <h1>Strength. Balance. Your <span>PULSE.</span></h1>
+          <p data-i18n="hero_sub">
+            Train with purpose. Move with balance. Become the strongest version of you in a space built for athletes.
+          </p>
+
+          <div class="cta-row">
+            <button id="heroStart" class="primary-btn large" data-i18n="start_workouts">Start Workouts</button>
+            <a href="#memberships" class="text-link" data-i18n="view_plans">View memberships</a>
+          </div>
+
+          <div class="meta-strip">
+            <div><i data-feather="clock"></i> <span data-i18n="open_hours">Open: 6:00 — 23:00</span></div>
+            <div><i data-feather="map-pin"></i> <span data-i18n="nearby">Downtown • City center</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8d5e?q=80&w=1200&auto=format&fit=crop" alt="Athlete strength training" />
+          <div class="floating-card glass-panel">
+            <span class="mini-title" data-i18n="premium_club">Premium club</span>
+            <strong data-i18n="book_session">Book a session with a pro trainer</strong>
+          </div>
+        </div>
+      </section>
+
+      <nav class="nav-bar container glass-panel" aria-label="Main navigation">
+        <a href="#workouts" data-i18n="workouts">Workouts</a>
+        <a href="#trainers" data-i18n="trainers">Trainers</a>
+        <a href="#memberships" data-i18n="memberships">Memberships</a>
+        <a href="#nutrition" data-i18n="nutrition">Nutrition</a>
+        <a href="#store" data-i18n="store">Store</a>
+        <a href="#map" data-i18n="location">Location</a>
+        <a href="#contact" data-i18n="contact">Contact</a>
+      </nav>
+
+      <section id="workouts" class="container section">
+        <div class="section-head">
+          <h2 data-i18n="workouts">Workouts</h2>
+          <p data-i18n="workouts_sub">Structured programs for strength, mobility, and endurance.</p>
+        </div>
+
+        <div class="card-grid three-up">
+          <article class="glass-panel card">
+            <img src="https://images.unsplash.com/photo-1517964104471-8a1bb8e0f3f4?q=80&w=900&auto=format&fit=crop" alt="Strength workout" />
+            <h3 data-i18n="strength">Strength</h3>
+            <p data-i18n="strength_desc">Barbell work, periodization and coaching for serious progress.</p>
+            <button class="ghost-btn small" data-i18n="learn_more">Learn more</button>
+          </article>
+
+          <article class="glass-panel card">
+            <img src="https://images.unsplash.com/photo-1546483764-2a0b07be9d0f?q=80&w=900&auto=format&fit=crop" alt="Mobility workout" />
+            <h3 data-i18n="balance">Balance & Mobility</h3>
+            <p data-i18n="balance_desc">Improve flexibility, stability, and recovery with expert guidance.</p>
+            <button class="ghost-btn small" data-i18n="learn_more">Learn more</button>
+          </article>
+
+          <article class="glass-panel card">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001d3?q=80&w=900&auto=format&fit=crop" alt="Cardio training" />
+            <h3 data-i18n="cardio">Cardio & Endurance</h3>
+            <p data-i18n="cardio_desc">Intervals and steady-state sessions to raise stamina and performance.</p>
+            <button class="ghost-btn small" data-i18n="learn_more">Learn more</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="trainers" class="container section">
+        <div class="section-head">
+          <h2 data-i18n="trainers">Trainers</h2>
+          <p data-i18n="trainers_sub">Certified coaches for performance, recovery and nutrition.</p>
+        </div>
+
+        <div class="card-grid four-up">
+          <article class="glass-panel trainer-card">
+            <img src="https://images.unsplash.com/photo-1594737625785-9d80f2bb2c3f?q=80&w=800&auto=format&fit=crop" alt="Olena Kovalenko" />
+            <div class="trainer-info">
+              <h4>Olena Kovalenko</h4>
+              <p data-i18n="trainer_strength">Strength coach</p>
+              <button class="primary-btn small" data-trainer="Olena Kovalenko" data-i18n="signup_small">Sign up</button>
+            </div>
+          </article>
+
+          <article class="glass-panel trainer-card">
+            <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8d5e?q=80&w=800&auto=format&fit=crop" alt="Max Petrov" />
+            <div class="trainer-info">
+              <h4>Max Petrov</h4>
+              <p data-i18n="trainer_endurance">Endurance specialist</p>
+              <button class="primary-btn small" data-trainer="Max Petrov" data-i18n="signup_small">Sign up</button>
+            </div>
+          </article>
+
+          <article class="glass-panel trainer-card">
+            <img src="https://images.unsplash.com/photo-1543936594-2a3d7f74f24a?q=80&w=800&auto=format&fit=crop" alt="Sofia Ivanova" />
+            <div class="trainer-info">
+              <h4>Sofia Ivanova</h4>
+              <p data-i18n="trainer_mobility">Mobility & rehab</p>
+              <button class="primary-btn small" data-trainer="Sofia Ivanova" data-i18n="signup_small">Sign up</button>
+            </div>
+          </article>
+
+          <article class="glass-panel trainer-card">
+            <img src="https://images.unsplash.com/photo-1526406915897-4c4d8f2f7876?q=80&w=800&auto=format&fit=crop" alt="Andriy Shev" />
+            <div class="trainer-info">
+              <h4>Andriy Shev</h4>
+              <p data-i18n="trainer_nutrition">Nutrition coach</p>
+              <button class="primary-btn small" data-trainer="Andriy Shev" data-i18n="signup_small">Sign up</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="memberships" class="container section">
+        <div class="section-head">
+          <h2 data-i18n="memberships">Memberships</h2>
+          <p data-i18n="memberships_sub">Flexible plans for every level of training.</p>
+        </div>
+
+        <div class="card-grid three-up">
+          <article class="glass-panel plan-card">
+            <div class="plan-header">
+              <h3 data-i18n="plan_basic">Basic</h3>
+              <span class="badge">Starter</span>
+            </div>
+            <p class="price" data-base-ua-price="499">499 ₴ / mo</p>
+            <ul>
+              <li data-i18n="access_gym">Gym access</li>
+              <li data-i18n="free_wifi">Wi-Fi</li>
+            </ul>
+            <button class="primary-btn" onclick="subscribe('Basic')" data-i18n="join">Join</button>
+          </article>
+
+          <article class="glass-panel plan-card featured">
+            <div class="plan-header">
+              <h3 data-i18n="plan_pro">Pro</h3>
+              <span class="badge">Popular</span>
+            </div>
+            <p class="price" data-base-ua-price="899">899 ₴ / mo</p>
+            <ul>
+              <li data-i18n="all_access">All classes</li>
+              <li data-i18n="sauna">Sauna access</li>
+            </ul>
+            <button class="primary-btn" onclick="subscribe('Pro')" data-i18n="join">Join</button>
+          </article>
+
+          <article class="glass-panel plan-card">
+            <div class="plan-header">
+              <h3 data-i18n="plan_elite">Elite</h3>
+              <span class="badge">Top</span>
+            </div>
+            <p class="price" data-base-ua-price="1599">1,599 ₴ / mo</p>
+            <ul>
+              <li data-i18n="personal">Personal trainer sessions</li>
+              <li data-i18n="priority">Priority booking</li>
+            </ul>
+            <button class="primary-btn" onclick="subscribe('Elite')" data-i18n="join">Join</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="nutrition" class="container section">
+        <div class="section-head">
+          <h2 data-i18n="nutrition">Proper Nutrition</h2>
+          <p data-i18n="nutrition_sub">Performance nutrition, meal planning, and recovery support.</p>
+        </div>
+
+        <div class="nutrition-layout">
+          <div class="glass-panel nutrition-copy">
+            <h3 data-i18n="nutrition_plan">Custom meal plans</h3>
+            <p data-i18n="nutrition_desc">Our experts build simple, realistic systems for your goals, schedule and recovery needs.</p>
+            <button class="ghost-btn" data-i18n="learn_more">Learn more</button>
+          </div>
+
+          <div id="store" class="store-panel glass-panel">
+            <h3 data-i18n="store">Sports Nutrition Store</h3>
+            <div id="productGrid" class="product-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="map" class="container section">
+        <div class="section-head">
+          <h2 data-i18n="location">Location</h2>
+          <p data-i18n="map_sub">Find the club and build a route in one tap.</p>
+        </div>
+
+        <div class="map-card glass-panel">
+          <div id="mapid" class="mapid"></div>
+          <div class="map-actions">
+            <button id="routeBtn" class="primary-btn">
+              <i data-feather="navigation"></i>
+              <span data-i18n="get_route">Get route</span>
+            </button>
+            <div class="route-note"><i data-feather="map-pin"></i> <span data-i18n="club_marker">PULSE Club</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container section">
+        <div class="section-head">
+          <h2 data-i18n="contact">Contact & Sign up</h2>
+        </div>
+
+        <div class="contact-grid">
+          <form id="signupForm" class="glass-panel form-panel">
+            <h3 data-i18n="signup">Book a training</h3>
+
+            <label>
+              <span data-i18n="full_name">Full name</span>
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              <span data-i18n="email">Email</span>
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              <span data-i18n="phone">Phone</span>
+              <input type="tel" name="phone" placeholder="+380..." />
+            </label>
+
+            <label>
+              <span data-i18n="select_trainer">Trainer</span>
+              <select name="trainer">
+                <option value="">—</option>
+                <option>Olena Kovalenko</option>
+                <option>Max Petrov</option>
+                <option>Sofia Ivanova</option>
+                <option>Andriy Shev</option>
+              </select>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="primary-btn" data-i18n="book">Book</button>
+              <span id="formMsg" class="form-msg"></span>
+            </div>
+          </form>
+
+          <aside class="glass-panel info-panel">
+            <h3 data-i18n="get_in_touch">Get in touch</h3>
+            <p><i data-feather="phone"></i> +380 44 123 4567</p>
+            <p><i data-feather="mail"></i> hello@pulse.fit</p>
+            <p><i data-feather="map-pin"></i> 25 Center St, Downtown</p>
+            <div class="socials">
+              <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer glass-panel container">
+      <p>© <span id="year"></span> PULSE Fitness Club</p>
+      <div class="footer-links">
+        <a href="#privacy" data-i18n="privacy">Privacy</a>
+        <a href="#terms" data-i18n="terms">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <div id="cartModal" class="modal">
+    <div class="modal-content glass-panel">
+      <div class="modal-header">
+        <h3 data-i18n="cart">Cart</h3>
+        <button id="closeCart" class="icon-btn" aria-label="Close cart"><i data-feather="x"></i></button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="modal-footer">
+        <div class="total-line">
+          <span data-i18n="total">Total</span>
+          <strong id="cartTotal">0 ₴</strong>
+        </div>
+        <div class="modal-actions">
+          <button id="clearCart" class="ghost-btn" data-i18n="clear">Clear</button>
+          <button id="checkoutBtn" class="primary-btn" data-i18n="checkout">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+  <script src="app.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
